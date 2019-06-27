@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.offcn.dao.Carservice">
+    <insert id="createUser" parameterType="com.offcn.po.Car">
+insert into cars(name,age) values(#{name},#{age})
+</insert>
+    <update id="updateUser" parameterType="com.offcn.po.Car">
+update cars set name=#{name},age=#{age} where id=#{id}
+</update>
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from cars where id=#{id}
+</delete>
+    <select id="getUserList" resultType="com.offcn.po.Car">
+select * from cars
+</select>
+    <select id="getUser" parameterType="java.lang.Integer"
+            resultType="com.offcn.po.Car">
+select * from cars where id=#{id}
+</select>
+</mapper>
