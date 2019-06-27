@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class MybatisApplicationTests {
 //测试idea Git克隆
+    //测试下拉
     @Test
     public void contextLoads() {
     }
